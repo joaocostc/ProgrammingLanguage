@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execício 01</title>
+    <script>
+        /*
+            Escreva um programa que peça um número inteiro ao usuário
+            e informe se esse número é par ou impar
+            você irá usar:
+                1) parseInt() para converter a entrada
+                2) isNaN para testar o resultado da conversão
+                3) O operador % para determinar o resto da divisão
+                4) o operador === para fazer a comparação
+        */
+        let num1 //Declaração das variáveis
+
+        num1 = parseInt(prompt('Informe o primeiro número:'))//Entrada de dados (número inteiro)
+
+        /*pode ser feito dessa forma também:
+        
+        let num1 = parseInt(prompt('Informe o primeiro número:'))//Entrada de dados (número inteiro)
+
+        */
+
+        if (isNaN(num1)){//Conversão num1 falhou
+            alert('O primeiro número é inválido ou não foi informado.')
+        }
+        else {
+            if (num1 % 2 === 0){//Verificar se o número é par, resto da divisão por 2 é igual a 0 (zero)
+                alert ('O número é par.')
+            }
+            else{//Verificar se o número é impar, resto da divisão por 2 é diferente de 0 (zero)
+                alert('O número é impar.')
+            }  
+        }
+  
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

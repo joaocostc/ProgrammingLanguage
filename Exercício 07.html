@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+    <script>
+        /*
+            Peça ao usuáario para informar dois números inteiros.
+            Use o loop do..while para garantir que os números
+            sejam válidos e que o segundo número seja maior do que
+            o primeiro.
+
+            Utilizando um loop for, calcule a somatória dos números 
+            inteiros existentes entre os valores informados. Por
+            exemplo, se os números informados forem 20 e 25, você
+            somará 20 + 21 + 22 + 23 + 24 + 25.
+        */
+
+        let n1, n2
+        let res = 0
+        
+        do{
+            n1 = parseInt(prompt("Informe o primeiro número:"))
+        } while (isNaN(n1))
+
+        do{
+            n2 = parseInt(prompt("Informe o segundo número(é necessário ser maior do que o primeiro):"))
+        } while (isNaN(n2) || n2 <= n1)
+
+        for (let i = n1; i <= n2; i++){
+            res = res + i
+        }
+
+        document.write ("A somatória dos números existentes entres os valores informados é:" + res)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

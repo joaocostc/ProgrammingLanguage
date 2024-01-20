@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 02 </title>
+    <script>
+        
+        /*
+            Solicite ao usuário que informe o número correspondente 
+            a um mês (1 a 12).
+            Usando a estrutura switch.case (com cases vazios, se for 
+            pertinente) determine quantos dias o mês possui, conforme
+            segue:
+            * JANEIRO, MARÇO, MAIO, JULHO, AGOSTO, OUTUBRO E DEZEMBRO:
+            31 DIAS
+            * ABRIL, JUNHO, SETEMBRO E NOVEMBRO: 30 DIAS
+            * FEVEREIRO: 28 dias (desconsidere a existência de anos bissextos)
+            * Por fim, usando document.write(), informe ao usuário o
+            * resultado encontrado.
+        */
+
+        // Usuário digita o número referente ao mês solicitado
+        let mes = parseInt(prompt('Informe um número correspondente a um mês (1 a 12):'))
+        let res
+
+        // Validação
+        if (isNaN(mes)){
+            alert ('ERRO: número inválido ou não informado.')
+        }
+
+        //Daqui em diante os números são válidos e passamos a verificar qual foi o mês escolhido
+        else{
+            switch(mes){
+                case 1: //Janeiro
+                case 3: //Março
+                case 5: //Maio
+                case 7: //Julho
+                case 8: //Agosto
+                case 10: //Outubro
+                case 12: //Dezembro
+                    res = 31
+                    break
+                case 4: //Abril
+                case 6: //Junho
+                case 9: //Setembro
+                case 11: //Novembro
+                    res = 30
+                    break
+                case 2: //Fevereiro
+                    res = 28
+                    break
+                default:
+                    alert('ERRO: número inválido ou não informado.')
+            }
+        }
+
+        // Resultado e validação / saída dos dados
+        if (res != undefined){
+        document.write('O mês ' + mes + ' tem: ' + res + ' dias.')
+        }
+
+        /*
+        if (res != undefinded){
+            //String template: note que é delimitado entre acentos graves``
+            document.write(`O mês tem ${mes} tem ${res} dias.)
+        }
+        */
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
